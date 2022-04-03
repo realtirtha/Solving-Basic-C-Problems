@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# program to check leap year using conditional Operator
+
+
+            int year;
+            Console.WriteLine("Enter Year");
+            year = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(year % 4 == 0 ? "Entered year is a leap" : "Not leap year");
+
+
+            Console.ReadLine();
+        }
+    }
+}
