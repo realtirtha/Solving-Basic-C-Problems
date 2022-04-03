@@ -1,0 +1,22 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Problems
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# Program to Print ASCII Value
+            char ch;
+            Console.WriteLine("Enter a character:");
+            ch = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("ASCII value of " + ch + " : " + Convert.ToInt32(ch));
+            
+            Console.ReadLine();
+        }
+    }
+}
+
+
