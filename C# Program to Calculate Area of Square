@@ -1,0 +1,22 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# Program to Calculate Area of Square
+
+            double area, length;
+            Console.WriteLine("Enter the length of a side : ");
+            length = Convert.ToDouble(Console.ReadLine());
+            area = length * length;
+            Console.WriteLine("Area of square is: " + area);
+
+            Console.ReadLine();
+        }
+    }
+}
