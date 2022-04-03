@@ -1,0 +1,6 @@
+//program to convert foot into meter
+            Console.WriteLine("Enter the number in feet: ");
+            double feet = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("given feet = "+ feet);
+            double meter = feet * 0.3048;
+            Console.WriteLine("given number in meter = "+ meter);
