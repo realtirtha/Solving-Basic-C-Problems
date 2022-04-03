@@ -1,0 +1,44 @@
+double a, b, result;
+            Console.WriteLine("Enter the first value");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the second value");
+            b = Convert.ToDouble(Console.ReadLine());
+            while (true)
+            {
+                char choice;
+                Console.WriteLine("************************");
+                Console.WriteLine("Choose '+' for addition");
+                Console.WriteLine("Choose '-' for subtraction");
+                Console.WriteLine("Choose '*' for multiplication");
+                Console.WriteLine("Choose '/' for division");
+                Console.WriteLine("Choose 'e' to exit");
+                Console.WriteLine("Enter your choice ");
+                choice = Convert.ToChar(Console.ReadLine());
+                switch (choice)
+                {
+                    case '+':
+                        result = a + b;
+                        Console.WriteLine("result = " + result);
+                        break;
+
+                    case '-':
+                        result = a - b;
+                        Console.WriteLine("reslut = " + result);
+                        break;
+
+                    case '*':
+                        result = a * b;
+                        Console.WriteLine("result = " + result);
+                        break;
+
+                    case '/':
+                        result = a / b;
+                        Console.WriteLine("result = " + result);
+                        break;
+                    case 'e':
+                        return;
+                    default:
+                        Console.WriteLine("enter valid option");
+                        break;
+                }
+            }
