@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# program to check uppercase or lowercase alphabets
+
+            char ch;
+            Console.Write("Enter an alphabet: ");
+            ch = Convert.ToChar(Console.ReadLine());
+            int i = ch;
+            if (i >= 97 && i <= 122)
+                Console.WriteLine("Entered alphabet is lower case");
+            else if (i >= 65 && i <= 90)
+                Console.WriteLine("Entered alphabet is upper case");
+            else
+                Console.WriteLine("Invalid input");
+
+
+            Console.ReadLine();
+        }
+    }
+}
