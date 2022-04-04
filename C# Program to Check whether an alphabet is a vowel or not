@@ -1,0 +1,24 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# Program to Check whether an alphabet is a vowel or not
+
+            Console.WriteLine("Enter a character from A-Z or a-z");
+            char ch = Convert.ToChar(Console.ReadLine().ToLower());
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                Console.WriteLine("enter alphabet is vowel");
+            else
+                Console.WriteLine("entered alphabet is not vowel");
+
+
+            Console.ReadLine();
+        }
+    }
+}
