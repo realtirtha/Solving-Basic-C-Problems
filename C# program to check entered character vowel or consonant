@@ -14,7 +14,7 @@ namespace csharpbasic
             Console.WriteLine("Enter an character: ");
             ch = Convert.ToChar(Console.ReadLine().ToLower());
             int i = ch;
-            if(i >= 97 && i <= 125)
+            if(i >= 97 && i <= 122)
             {
                 alphabet();
             }
