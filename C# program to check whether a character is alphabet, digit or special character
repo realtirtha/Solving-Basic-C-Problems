@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# program to check whether a character is alphabet, digit or special character
+
+            Console.WriteLine("Enter a character: ");
+            char ch =Convert.ToChar(Console.ReadLine());
+            int i = ch;
+            //to check if alphabet
+            if((i >=65 && i <= 90)||(i >= 97 && i <= 122))
+            {
+                Console.WriteLine("Enterted character is an alphabet");
+            }
+            else if(i >= 48 && i <= 57)
+            {
+                Console.WriteLine("Entered character is a digit");
+            }
+            else if((i >= 33 && i <= 47)|| (i >= 58 && i <= 64) || (i >= 91 && i <= 96) || (i >=123 && i<= 126) )
+            {
+                Console.WriteLine("Entered character is a special digit");
+            }
+            else
+            {
+                Console.WriteLine("Entered valid character");
+            }
+
+
+            Console.ReadLine();
+        }
+    }
+}
