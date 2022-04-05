@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# program to detrermine a candidate’s age is eligible for casting the vote or not
+
+            int age;
+            Console.Write("Enter an age of a candidate: ");
+            age = Convert.ToInt32(Console.ReadLine());
+            if(age >= 18)
+            {
+                Console.WriteLine("Candidate is eligible for casting the vote.");
+            }
+            else
+            {
+                Console.WriteLine("Candidat is not eligible for casting the vote.");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
