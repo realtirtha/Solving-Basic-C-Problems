@@ -1,0 +1,49 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# program to print day name of week
+
+
+                int week;
+                Console.WriteLine("Enter a number of week between 1-7");
+                week = Convert.ToInt32(Console.ReadLine());
+                switch(week)
+                {
+                    case 1:
+                        Console.WriteLine("Sunday");
+                        break;
+                    case 2:
+                        Console.WriteLine("Monday");
+                        break;
+                    case 3:
+                        Console.WriteLine("Tuesday");
+                        break;
+                    case 4:
+                        Console.WriteLine("Wednesday");
+                        break;
+                    case 5:
+                        Console.WriteLine("Thursday");
+                        break;
+                    case 6:
+                        Console.WriteLine("Friday");
+                        break;
+                    case 7:
+                        Console.WriteLine("Saturday");
+                        break;
+                    default:
+                        Console.WriteLine("Enter valid number!");
+                        break;
+                }
+
+
+            Console.ReadLine();
+        }
+    }
+}
