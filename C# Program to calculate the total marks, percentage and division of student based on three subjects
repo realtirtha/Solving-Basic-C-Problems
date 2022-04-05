@@ -1,0 +1,92 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# Program to calculate the total marks, percentage and division of student based on three subjects
+
+            double total, percent;
+            double p, c, m;
+            Console.WriteLine("****************************");
+            Console.Write("Enter the student name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter the Roll number: ");
+            int roll = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter marks of " + name + " on physics: ");
+            p = Convert.ToDouble(Console.ReadLine());
+            if (p >= 0 && p <= 100)
+            {
+                Console.Write("Enter marks of " + name + " on chemistry: ");
+                c = Convert.ToDouble(Console.ReadLine());
+                if (c >= 0 && c <= 100)
+                {
+                    Console.Write("Enter marks of " + name + " on mathematics: ");
+                    m = Convert.ToDouble(Console.ReadLine());
+                    if (m >= 0 && m <= 100)
+                    {
+                        calculations();
+                    }
+                    else
+                    {
+                        invalid();
+                    }
+                }
+                else
+                {
+                    invalid();
+                }
+            }
+            else
+            {
+                invalid();
+            }
+            
+            void calculations()
+            {
+                Console.WriteLine("-----*******------");
+                total = p + c + m;
+                percent = (total * 100) / 300;
+                Console.WriteLine("Student Name: " + name);
+                Console.WriteLine(" Student Roll no. : " + roll);
+                Console.WriteLine("Total marks: " + total);
+                Console.WriteLine("Total percentage: " + percent);
+                if ( percent >= 80)
+                {
+                    Console.WriteLine("Division: Distinction");
+                }
+                else if(percent >= 60 && percent <80 )
+                {
+                    Console.WriteLine("Division: First");
+                }
+                else if( percent >=50 && percent < 60)
+                {
+                    Console.WriteLine("Division: Second");
+                }
+                else if( percent >=40 && percent < 50)
+                {
+                    Console.WriteLine("Division: Third");
+                }    
+                else
+                {
+                    Console.WriteLine("Division: FAILED!");
+                }
+
+            }
+
+            void invalid()
+            {
+                Console.WriteLine("Invalid Input");
+                return;
+            }
+            
+
+            Console.ReadLine();
+        }
+    }
+}
