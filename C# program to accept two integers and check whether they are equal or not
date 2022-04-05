@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# program to accept two integers and check whether they are equal or not
+
+            int num1, num2;
+            Console.WriteLine("Enter two integer to check if they are equal: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            num2 = Convert.ToInt32(Console.ReadLine());
+            if(num1 == num2)
+            {
+                Console.WriteLine(num1 + " and " + num2 + " are equal");
+            }
+            else
+            {
+                Console.WriteLine(num1 + " and " + num2 + " are not equal");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
