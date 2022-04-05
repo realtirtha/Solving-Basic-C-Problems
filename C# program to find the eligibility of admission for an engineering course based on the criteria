@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# program to find the eligibility of admission for an engineering course based on the criteria
+
+            double gpa;
+            Console.Write("Enter you GPA on highschool: ");
+            gpa = Convert.ToDouble(Console.ReadLine());
+            
+            if(gpa >= 1 && gpa <= 4)
+            {
+                if (gpa >= 3.30)
+                {
+                    Console.WriteLine("You are eligible for admission");
+                }
+                else
+                {
+                        Console.WriteLine("You are not eligible for admission");
+                }
+             }
+            else
+            {
+                Console.WriteLine("Enter valid GPA");
+            }
+            
+            
+
+            Console.ReadLine();
+        }
+    }
+}
