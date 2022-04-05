@@ -1,0 +1,31 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //C# Program to check whether a triangle can be formed by the given value for the angles
+
+            int angle1, angle2, angle3;
+            Console.Write("Enter the three angles of a triangle: ");
+            angle1 = Convert.ToInt32(Console.ReadLine());
+            angle2 = Convert.ToInt32(Console.ReadLine());
+            angle3 = Convert.ToInt32(Console.ReadLine());
+            int sum = angle1 + angle2 + angle3;
+            if(sum == 180)
+            {
+                Console.WriteLine("Triangle can be formed from given angles.");
+            }
+            else
+            {
+                Console.WriteLine("Triangle cannot be formed from given angles.");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
