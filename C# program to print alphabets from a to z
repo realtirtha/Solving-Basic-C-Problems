@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //Write C# program to print alphabets from a to z
+
+            Console.WriteLine("Alphabets from a - z : ");
+            for (int i = 97; i< 123; i++)
+            {
+                char c=Convert.ToChar(i);
+                Console.WriteLine(c);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
