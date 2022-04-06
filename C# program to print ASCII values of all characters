@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            //program to print ASCII values of all characters
+
+            for(int i=0; i<=255; i++)
+            {
+                char ch = Convert.ToChar(i);
+                Console.WriteLine("ASCII value of " + i + " is : " + ch);
+            }
+            
+
+            Console.ReadLine();
+        }
+    }
+}
