@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            // C# program to print sum of digits enter by user
+
+            int num, temp, sum = 0;
+
+            //read number
+            Console.Write("Enter a number : ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            //adding each digits
+            while(num > 0)
+            {
+                temp = num % 10;
+                sum += temp;
+                num /= 10;
+            }
+
+            //printing sum
+            Console.WriteLine("sum = " + sum);
+
+            Console.ReadLine();
+        }
+    }
+}
