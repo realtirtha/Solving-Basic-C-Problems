@@ -1,0 +1,34 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            // C# program to find sum of even numbers between 1 to n
+
+            int num, sum = 0;
+
+            //reading number
+            Console.Write("Enter a number : ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            //finding even numbers
+            for(int i = 0; i <= num; i++)
+            {
+                if( i%2 == 0 )
+                {
+                    sum += i;
+                }
+            }
+
+            //printing sum
+            Console.WriteLine("sum {0}", sum);
+
+            Console.ReadLine();
+        }
+    }
+}
