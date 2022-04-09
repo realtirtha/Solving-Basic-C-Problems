@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            // C# program to find factorial of any number
+
+            int num, fact = 1;
+
+            Console.WriteLine("Enter any number to find factorial: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            while(num > 0)
+            {
+                fact = fact * num;
+                num--;
+            }
+
+            Console.WriteLine("factorial = " + fact);
+
+            Console.ReadLine();
+        }
+    }
+}
