@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            // C# program to check whether a number is Armstrong number or not
+
+            int sum = 0, i, r, num;
+
+            int[] arr = new int[10];
+
+            Console.Write("Enter a number : ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            for (i = num; i > 0; i = i / 10)
+            {
+                r = i % 10;
+                sum = sum + r * r * r;
+            }
+
+            if (num == sum)
+            {
+                Console.WriteLine(num + " is an armstrong number.");
+            }
+            else
+            {
+                Console.WriteLine(num + " is not an armstrong number.");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
