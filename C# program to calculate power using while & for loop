@@ -1,0 +1,43 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            // C# program to calculate power using while & for loop
+
+            int power, num, result=1;
+
+            Console.WriteLine("Enter a number: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the power: ");
+            power = Convert.ToInt32(Console.ReadLine());
+            int powerFor = power;
+
+            //using while loop
+            while (power  > 0)
+            {
+                result *= num;
+                power--;
+            }
+
+            Console.Write("result using while loop: " + result);
+
+            //using for loop
+            result = 1;
+            for(int i=powerFor;i>0;i--)
+            {
+                result *= num;
+            }
+
+            Console.Write("\nresult using for loop: " + result);
+
+            Console.ReadLine();
+        }
+    }
+}
