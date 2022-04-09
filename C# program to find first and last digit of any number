@@ -1,0 +1,42 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+            // C# program to find first and last digit of any number
+
+            int count =0;
+            Console.WriteLine("enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            int last = num % 10;
+            int temp1 = num;
+            while(temp1 > 0)
+            {
+                temp1 = temp1 / 10;
+                count++;
+            }
+
+            string n = "1";
+            while(count-1 > 0)
+            {
+                n = n + "0";
+                count--;
+            }
+
+            int n1 = Convert.ToInt32(n);
+
+            int first = num/n1;
+
+            Console.WriteLine("first digit : " + first);
+            Console.WriteLine("last digit : " + last);
+
+            Console.ReadLine();
+        }
+    }
+}
