@@ -1,0 +1,42 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+
+            // C# program to calculate compound interest
+
+            double amount, interest, time;
+
+            //reading amount, interest and time period
+
+            Console.Write("Enter an amount : ");
+            amount = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter an interest rate: ");
+            double rate = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the time period in years: ");
+            time = Convert.ToDouble(Console.ReadLine());
+
+            interest = 1 + (rate / 100);
+
+            //ci=pow (interest, time)
+            double ci = 1;
+            for(int a = 1; a<=time; a++)
+            {
+                ci *= interest;
+            }
+            ci = amount * ci - amount;
+            Console.WriteLine("The compount interest is : " + ci);
+
+
+            Console.ReadLine();
+        }
+    }
+}
