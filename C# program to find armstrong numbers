@@ -1,0 +1,56 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+
+            // C# program to find armstrong numbers
+
+            int lower, higher, temp1, temp2, n=0, remainder;
+            double result = 0;
+
+            Console.WriteLine("Enter two numbers: ");
+            lower = Convert.ToInt32(Console.ReadLine());
+            higher = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Armstrong numbers between " + lower + " and " + higher + " numbers are: ");
+            for(int i = lower + 1; i< higher; ++i)
+            {
+                temp1 = i;
+                temp2 = i;
+
+                //number of digits calculation
+                while (temp1 != 0)
+                {
+                    temp1 /= 10;
+                    ++n;
+                }
+
+                //finding sum of nth power of its digits
+                while(temp2 != 0)
+                {
+                    remainder = temp2 % 10;
+                    result = result + Math.Pow(remainder, n);
+                    temp2 /= 10;
+                }
+
+                //checking if it's armstrong number or not
+                if(result == i)
+                {
+                    Console.WriteLine(i);
+                }
+
+                //resetting the value to check armstrong for next iteration
+                result = 0;
+                n = 0;
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
