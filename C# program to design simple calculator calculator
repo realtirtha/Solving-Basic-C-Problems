@@ -1,0 +1,56 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+
+            // C# program to design simple calculator calculator
+
+            double num1, num2;
+            double result;
+            char op;
+
+            Console.Write("Enter your first number: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the operator: ");
+            op = Convert.ToChar(Console.ReadLine());
+
+            Console.Write("Enter the second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            if(op == '+')
+            {
+                result = num1 + num2;
+                Console.Write("result = " + result);
+            }
+            else if(op == '-')
+            {
+                result = num2 - num1;
+                Console.Write("result = " + result);
+            }
+            else if(op== '*')
+            {
+                result = num1 * num2;
+                Console.Write("result = " + result);
+            }
+            else if(op == '/')
+            {
+                result = num1 / num2;
+                Console.Write("result = " + result);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+            Console.ReadLine();
+        }
+        
+    }
+}
