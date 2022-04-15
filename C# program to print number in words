@@ -1,0 +1,66 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+
+            // C# program to print number in words
+
+            int n, num = 0;
+
+            //reading number
+            Console.WriteLine("Enter any number to print in words: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            while(n!=0)
+            {
+                num = (num * 10) + ( n% 10);
+                n/= 10;
+            }
+
+            //printing corresponding digits
+            while(num!=0)
+            {
+                switch(num%10)
+                {
+                    case 0: Console.Write("zero ");
+                        break;
+                    case 1: Console.Write("one ");
+                        break;
+                    case 2: Console.Write("two ");
+                        break;
+                    case 3:
+                        Console.Write("three ");
+                        break;
+                    case 4:
+                        Console.Write("four ");
+                        break;
+                    case 5:
+                        Console.Write("five ");
+                        break;
+                    case 6:
+                        Console.Write("six ");
+                        break;
+                    case 7:
+                        Console.Write("seven ");
+                        break;
+                    case 8:
+                        Console.Write("eight ");
+                        break;
+                    case 9:
+                        Console.Write("nine ");
+                        break;
+                }
+                num = num / 10;
+            }
+
+            Console.ReadLine();
+        }
+        
+    }
+}
