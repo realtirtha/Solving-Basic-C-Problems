@@ -1,0 +1,50 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+
+            // C# program to check even or odd number using switch case
+
+            int num;
+            int choice;
+
+            Console.WriteLine("Enter any number to check odd or even : ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            if(num % 2 == 0)
+                choice = 0;
+            else if(num % 2 != 0)
+                choice = 1;
+            else
+                choice = 2;
+            
+
+            switch(choice)
+            {
+                case 0:
+                    Console.WriteLine("Even");
+                    break;
+
+                case 1:
+                    Console.WriteLine("odd");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Invalid Input");
+                    break;
+            }
+
+
+
+
+            Console.ReadLine();
+        }
+        
+    }
+}
