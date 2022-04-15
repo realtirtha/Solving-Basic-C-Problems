@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        //Main() method
+        static void Main(string[] args)
+        {
+
+            // C# program to find HCF of any two numbers
+
+            int i, num1, num2, min, HCF = 1;
+
+            //reading 2 numbers from users
+            Console.WriteLine("Enter two numbers to find HCF: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            //finding min numbers between two numbers
+            min = (num1<num2)?num1 : num2;
+
+            for(i= 1; i <= min; i++)
+            {
+                if( num1 % i == 0 && num2 % i == 0)
+                {
+                    HCF = i;
+                }
+            }
+
+            Console.WriteLine("HCF of " + num1 + " and " + num2 + " is: " + HCF);
+
+            Console.ReadLine();
+        }
+        
+    }
+}
