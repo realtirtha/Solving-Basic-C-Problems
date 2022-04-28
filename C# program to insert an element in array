@@ -1,0 +1,62 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to insert an element in array
+        static void Main(string[] args)
+        {
+            int n, pos, num;
+            int[] arr = new int[100];
+
+            Console.WriteLine("Enter the size of an array: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements on array: ");
+            for(int i = 0; i < n; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("The elements on array are: ");
+            for(int i= 0;i < n; i++)
+            {
+                Console.Write(arr[i] + "\t");
+            }
+
+            Console.WriteLine("\nEnter the element that you want to enter: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the position in which you want to enter: ");
+            pos = Convert.ToInt32(Console.ReadLine());
+
+            if (pos > n +1  || pos <= 0)
+            {
+                Console.WriteLine("Invalid position! Please enter position between 1 to " + n);
+            }
+            else
+            {
+                for (int i = n; i >= pos; i--)
+                {
+                    arr[i] = arr[i - 1];
+                }
+
+                arr[pos - 1] = num;
+
+                Console.WriteLine("The array after insertion is: ");
+                for (int i = 0; i <= n; i++)
+                {
+                    Console.Write(arr[i] + "\t");
+                }
+            }
+
+            
+            
+
+            Console.ReadLine();
+        }
+        
+    }
+}
