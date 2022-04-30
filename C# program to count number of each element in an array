@@ -1,0 +1,57 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to count number of each element in an array
+        static void Main(string[] args)
+        {
+            int n, repeat;
+            int[] arr = new int[100];
+            int[] count = new int[100];
+
+            Console.WriteLine("Enter the size of an array: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements on first array: ");
+            for(int i = 0; i < n; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            //counting frequency
+
+            Console.WriteLine();
+            for(int i=0; i < n; i++)
+            {
+                repeat = 1;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if(arr[i] == arr[j])
+                    {
+                        for(int k = j; k < n - 1; k++)
+                        {
+                            arr[k] = arr[k + 1];
+                        }
+                        repeat++;
+                        j--;
+                        n--;
+                    }
+                }
+                count[i] = repeat;
+            }
+
+            //printing result
+            for(int i = 0; i < n; i++)
+            {
+                Console.WriteLine(arr[i] + " occurs " + count[i] + " times");
+            }
+            
+
+            Console.ReadLine();
+        }
+        
+    }
+}
