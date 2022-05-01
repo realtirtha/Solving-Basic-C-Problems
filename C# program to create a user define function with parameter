@@ -1,0 +1,31 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to create a user define function with parameter		
+        static void Main(string[] args)
+        {
+            string str;
+            Console.Write("Please enter your name: ");
+            str = Console.ReadLine();
+            welcome(str);
+            aday();
+
+            Console.ReadLine();
+        }
+
+        public static void welcome(string name)
+        {
+            Console.WriteLine("WELCOME " + name);
+        }
+
+        public static void aday()
+        {
+            Console.WriteLine("Have a nice day.");
+        }
+        
+    }
+}
