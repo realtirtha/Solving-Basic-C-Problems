@@ -1,0 +1,85 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to merge two and sort on ascending order
+
+        static void Main(string[] args)
+        {
+            int n1, n2, j = 0, temp;
+            int[] first = new int[100];
+            int[] second = new int[100];
+
+            //reading first array
+            Console.WriteLine("Enter the size of first array: ");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the elements on first array: ");
+            for (int i = 0; i < n1; i++)
+                first[i] = Convert.ToInt32(Console.ReadLine());
+
+            //reading second array
+            Console.WriteLine("\n\nEnter the size of second array: ");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the elements on second array: ");
+            for(int i = 0; i < n2; i++)
+                second[i] = Convert.ToInt32(Console.ReadLine());
+
+            //printing first and second array
+            Console.WriteLine("\nfirst array: ");
+            for (int i = 0; i < n1; i++)
+                Console.Write(first[i] + "\t");
+            Console.WriteLine("\nsecond array: ");
+            for(int i = 0; i < n2; i++)
+                Console.Write(second[i] + "\t");
+
+
+            //merging both arrays
+
+            for(int i = n1; i < n1+n2; i++)
+            {
+                first[i] = second[j];
+                j++;
+            }
+
+
+            //printing merged array
+
+            Console.WriteLine("\n\nElemets after sorting: ");
+            for(int i = 0; i < n1 + n2; i++)
+                Console.Write(first[i] + "\t");
+
+            //arranging on ascending order
+            for(int i = 0; i<n1 + n2; i++)
+            {
+                for(j = i+1; j < n1 + n2; j++)
+                {
+                    if (first[i] > first[j])
+                    {
+                        temp = first[i];
+                        first[i] = first[j];
+                        first[j] = temp;
+                    }
+                    else
+                    {
+                        first[i] = first[i];
+                        first[j] = first[j];
+                    }
+                }
+            }
+
+            //printing merged array on ascending order
+            Console.WriteLine("\n\nmerged array on ascending order: ");
+            for(int i = 0;i < n1 + n2; i++)
+            {
+                Console.Write(first[i] + "\t");
+            }
+
+
+            Console.ReadLine();
+        }
+        
+    }
+}
