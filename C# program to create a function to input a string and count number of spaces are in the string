@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to create a function to input a string and count number of spaces are in the string
+
+        static void Main(string[] args)
+        {
+            string str;
+            Console.WriteLine("Enter a sentence: ");
+            str = Console.ReadLine();
+            count(str);
+
+            Console.ReadLine();
+        }
+
+        public static void count(string sen)
+        {
+            int c = 0;
+            for(int i = 0; i < sen.Length; i++)
+            {
+                if(sen[i] == 32)
+                {
+                    c++;
+                }
+            }
+            Console.WriteLine(c);
+        }
+    }
+}
