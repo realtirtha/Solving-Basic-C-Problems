@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to add two numbers using function	
+        static void Main(string[] args)
+        {
+            //declaring
+            int n1, n2;
+
+            Console.WriteLine("Enter two numbers: ");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            n2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(n1 + " + " + n2 + " = " + sum(n1,n2));
+
+            Console.ReadLine();
+        }
+
+        public static int sum(int first, int second)
+        {
+            int total;
+            total = first + second;
+            return total;
+        }
+    }
+}
