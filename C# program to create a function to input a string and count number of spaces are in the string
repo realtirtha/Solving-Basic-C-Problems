@@ -27,7 +27,7 @@ namespace csharpbasic
                     c++;
                 }
             }
-            Console.WriteLine(c);
+            Console.WriteLine("total number of spaces on given string = " + c);
         }
     }
 }
