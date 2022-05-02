@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to copy one string to another string
+
+        static void Main(string[] args)
+        {
+            string str1, str2;
+
+            Console.WriteLine("Enter a string: ");
+            str1 = Console.ReadLine();
+
+            //copying string 
+            str2 = str1;
+
+            //printing copied string
+            Console.WriteLine("copied string: ");
+            Console.WriteLine(str2);
+
+            Console.ReadLine();
+        }
+                
+    }
+}
