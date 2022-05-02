@@ -1,0 +1,30 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to print individual characters of the string in reverse order
+
+        static void Main(string[] args)
+        {
+            string str;
+            int len;
+
+            Console.WriteLine("Input a string: ");
+            str = Console.ReadLine();
+
+            len = str.Length;
+
+            while(len > 0)
+            {
+                Console.WriteLine(str[len-1]);
+                len--;
+            }
+
+            Console.ReadLine();
+        }
+                
+    }
+}
