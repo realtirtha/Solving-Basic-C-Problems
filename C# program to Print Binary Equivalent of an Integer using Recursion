@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to Print Binary Equivalent of an Integer using Recursion
+
+        static void Main(string[] args)
+        {
+            int num;
+
+            Console.WriteLine("Enter a number in decimal: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            ToBinary(num);
+
+            Console.ReadLine();
+        }
+
+        public static void ToBinary(int n)
+        {
+            string str="";
+            int bin;
+            while (n > 0)
+            {
+                bin = n % 2;
+                n = n / 2;
+                str += Convert.ToString(bin);
+            }
+            char[] charArray = str.ToCharArray();
+            Array.Reverse(charArray);
+            Console.WriteLine(charArray);
+        }
+        
+    }
+}
