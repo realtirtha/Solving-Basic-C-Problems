@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to find the length of a string without using library function
+
+        static void Main(string[] args)
+        {
+            int count = 0;
+            string str;
+            Console.WriteLine("Input a string: ");
+            str = Console.ReadLine();
+
+            foreach(char ch in str)
+            {
+                count++;
+            }
+
+            Console.WriteLine("The length of a string is: {0}",count);
+
+            Console.ReadLine();
+        }
+                
+    }
+}
