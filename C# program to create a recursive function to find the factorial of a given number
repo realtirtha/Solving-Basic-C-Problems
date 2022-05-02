@@ -1,0 +1,34 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to create a recursive function to find the factorial of a given number
+
+        static void Main(string[] args)
+        {
+            int number, f;
+            Console.WriteLine("Enter a number: ");
+            number = Convert.ToInt32(Console.ReadLine());
+
+            f = Fact(number);
+
+            Console.WriteLine("The factorial of {0} is {1}", number, f );
+
+            Console.ReadLine();
+        }
+        
+        public static int Fact(int num)
+        {
+            if (num == 0)
+                return 1;
+            else
+            {
+                return num * Fact(num - 1);
+            }
+        }
+        
+    }
+}
