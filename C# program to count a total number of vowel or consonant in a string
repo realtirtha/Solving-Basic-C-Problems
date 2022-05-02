@@ -1,0 +1,42 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to count a total number of vowel or consonant in a string
+
+        static void Main(string[] args)
+        {
+            string str;
+            int vowel = 0, cons = 0, len, i = 0;
+
+            Console.WriteLine("Enter a string: ");
+            str = Console.ReadLine();
+            str = str.ToLower();
+            Console.WriteLine(str);
+            len = str.Length;
+
+            while (i < len)
+            {
+                if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+                {
+                    vowel++;
+                }
+                else if (str[i] >= 'a' && str[i] <= 'z')
+                {
+                    cons++;
+                }
+                i++;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Total vowels: {0}", vowel);
+            Console.WriteLine("Total Consonants: {0}", cons);
+
+            Console.ReadLine();
+        }
+                
+    }
+}
