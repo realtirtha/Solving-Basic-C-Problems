@@ -1,0 +1,25 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to Separate the individual characters from a string
+
+        static void Main(string[] args)
+        {
+            string str;
+            Console.WriteLine("Input a string: ");
+            str = Console.ReadLine();
+
+            for(int i = 0; i < str.Length; i++)
+            {
+                Console.Write(str[i] + " "); 
+            }
+
+            Console.ReadLine();
+        }
+                
+    }
+}
