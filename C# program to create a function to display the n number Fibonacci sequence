@@ -1,0 +1,40 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to create a function to display the n number Fibonacci sequence
+
+        static void Main(string[] args)
+        {
+            int n;
+
+            Console.WriteLine("Enter the number of fibonacci sequence you want to genereate: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            fibgen(n);
+
+
+            Console.ReadLine();
+        }
+
+        public static void fibgen(int num)
+        {
+            int a = 0, b= 1, c;
+            Console.WriteLine("The series is: ");
+            while (num > 0)
+            {
+                c = a;
+                a = b;
+                b = c + a;
+                num--;
+
+                Console.Write(c + "\t");
+            }
+        }
+        
+        
+    }
+}
