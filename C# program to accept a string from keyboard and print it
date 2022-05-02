@@ -1,0 +1,24 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to accept a string from keyboard and print it
+
+
+        static void Main(string[] args)
+        {
+            string str;
+            Console.WriteLine("Input a string: ");
+            str = Console.ReadLine();
+
+            Console.WriteLine("\nInput string is : " + str);
+            Console.ReadLine();
+        }
+
+        
+        
+    }
+}
