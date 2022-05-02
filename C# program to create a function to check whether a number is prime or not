@@ -1,0 +1,42 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to create a function to check whether a number is prime or not
+
+        static void Main(string[] args)
+        {
+            int num;
+
+            Console.WriteLine("Enter a number: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            if (Checkprime(num))
+            {
+                Console.WriteLine(num + " is a prime number");
+            }
+            else
+            {
+                Console.WriteLine(num + " is not a prime number");
+            }
+
+
+            Console.ReadLine();
+        }
+
+        public static bool Checkprime(int number)
+        {
+            for (int i = 2; i < number; i++)
+            {
+                if(number % i == 0)
+                    return false;
+            }
+            return true;
+        }
+        
+        
+    }
+}
