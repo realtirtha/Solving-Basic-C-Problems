@@ -1,0 +1,44 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to read a sentence and replace lowercase characters by uppercase and vice-versa
+
+        static void Main(string[] args)
+        {
+            string str;
+            int lower, upper;
+
+            Console.WriteLine("Input string: ");
+            str = Console.ReadLine();
+
+
+            Console.WriteLine("After replacing lowercase characters by upper case and vice versa: ");
+            for ( int i = 0; i < str.Length; i++)
+            {
+                if (str[i] >= 65 && str[i] <= 90)
+                {
+                    upper = str[i];
+                    upper += 32;
+                    Console.Write(Convert.ToChar(upper));
+                }
+                else if (str[i] >= 97 && str[i] <= 122)
+                {
+                    lower = str[i];
+                    lower -= 32;
+                    Console.Write(Convert.ToChar(lower));
+                }
+                else
+                {
+                    Console.Write(str[i]);
+                }
+            }
+
+            Console.ReadLine();
+        }
+                
+    }
+}
