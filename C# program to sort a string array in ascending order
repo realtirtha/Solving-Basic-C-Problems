@@ -1,0 +1,47 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to sort a string array in ascending order
+
+        static void Main(string[] args)
+        {
+            string str;
+            int len;
+            char temp;
+            char[] arr;
+
+            Console.WriteLine("Input string: ");
+            str = Console.ReadLine();
+
+            len = str.Length;
+            arr = str.ToCharArray(0, len);
+
+            for (int i = 0; i < len; i++)
+            {
+                for (int j = i + 1; j < len; j++)
+                {
+                    if (str[i] > str[j])
+                    {
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+
+            Console.Write("\nAfter sorting the string appears like : \n");
+            foreach (char c in arr)
+            {
+                temp = c;
+                Console.Write("{0} ", temp);
+            }
+
+            Console.ReadLine();
+        }
+                
+    }
+}
