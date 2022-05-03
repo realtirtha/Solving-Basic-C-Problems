@@ -1,0 +1,36 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to find the number of times a substring appears in the given string
+
+        static void Main(string[] args)
+        {
+            string str, sub;
+            int start = 0;
+            int count = -1;
+            int index = -1;
+
+            Console.WriteLine("Input string:");
+            str = Console.ReadLine();
+
+            Console.WriteLine("\nEnter a substring to search: ");
+            sub = Console.ReadLine();
+
+            while (start != -1)
+            {
+                start = str.IndexOf(sub, index+1);
+                count++;
+                index = start;
+            }
+
+            Console.Write("The string '{0}' occurs " + count + " times.\n", sub);
+
+            Console.ReadLine();
+        }
+                
+    }
+}
