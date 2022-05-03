@@ -1,0 +1,37 @@
+using System;
+using System.Collections;
+
+namespace csharpbasic
+{
+    class Programs
+    {
+        // C# program to check whether a given substring is present in the given string
+
+        static void Main(string[] args)
+        {
+            string str, sub;
+            bool check;
+
+            Console.WriteLine("Input string:");
+            str = Console.ReadLine();
+
+            Console.WriteLine("\nEnter a substring to search: ");
+            sub = Console.ReadLine();
+
+            check = str.Contains(sub);
+
+            if (check)
+            {
+                Console.WriteLine("\nGiven substring is present in the string");
+            }
+            else
+            {
+                Console.WriteLine("\nGiven substring is not present in the string");
+            }
+
+
+            Console.ReadLine();
+        }
+                
+    }
+}
